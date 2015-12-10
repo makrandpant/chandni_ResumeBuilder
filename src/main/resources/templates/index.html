@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:Sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+	<head><title>File Upload</title></head>
+<body>
+	<form th:action="@{/upload}" enctype="multipart/form-data" method="post" >
+	<div>
+		File to upload: <input type="file" name="file" /> 
+		Name: <input type="text" name="name" />
+		<input type="submit" value="Upload" />Press here to upload the file!
+		</div>
+	</form>
+	<span th:text="${resumeView}"></span>
+</body>
+</html>
